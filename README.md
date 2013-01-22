@@ -17,4 +17,42 @@ For more information, please see the Facebook Official Documentation:
 
 How to use
 ----------
-		test, test, test
+
+**Easy Way:**  
+
+1. Download files
+2. Upload to server
+3. Change *includes/facebook.php* APP_ID and APP_SECRET to your application
+
+		<?php
+
+		class Facebook {
+
+			protected $app_id 		= 'YOUR_APP_ID'; // Your Facebook App ID
+			protected $app_secret 	= 'YOUR_APP_SECRET'; // Your Facebook App Secret
+		
+			...
+
+**Slightly Less Easy Way:**  
+
+1. Include Facebook.php in your script
+2. Initiate the Facebook class
+3. Call the get_test_account($name) function
+
+		<?php
+
+		include 'includes/facebook.php';
+		
+		$facebook = new facebook(array('app_id' => 'YOUR_APP_ID', 'app_secret' => 'YOUR_APP_SECRET'));
+		
+		$name = 'Wally West';
+		
+		$test_account = $facebook->get_test_account($name);
+
+
+Misc
+------------
+
+1. Limitations of Test Accounts versus Real Accounts: https://developers.facebook.com/docs/test_users/#limitations
+2. This is free to use. No attribution required. Governed under the MIT license (http://opensource.org/licenses/MIT).
+3. Use this script at your own risk
