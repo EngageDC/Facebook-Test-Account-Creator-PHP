@@ -5,6 +5,7 @@
 	<title>Facebook Test Account Generator!</title>
 </head>
 <body>
+	
 	<h1>Facebook Test Account Generator</h1>
 	
 	<?php
